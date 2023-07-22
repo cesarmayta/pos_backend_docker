@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -93,11 +93,11 @@ WSGI_APPLICATION = 'pos_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('MYSQL_ADDON_DB'),
-        'USER': config('MYSQL_ADDON_USER'),
-        'PASSWORD': config('MYSQL_ADDON_PASSWORD'),
-        'HOST': config('MYSQL_ADDON_HOST'),
-        'PORT': config('MYSQL_ADDON_PORT'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PWD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 
