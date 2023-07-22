@@ -6,5 +6,4 @@ cloudinary
 djangorestframework-simplejwt
 drf-yasg
 python-decouple
-whitenoise
 gunicorn
